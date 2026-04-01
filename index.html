@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Modulate-and-Map: Crossmodal Feature Mapping with Cross-View Modulation for 3D Anomaly Detection.">
+  <meta name="keywords" content="anomaly, detection, segmentation, multiview, multimodal, localisation, localization">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Towards Reliable Identification of Diffusion-based Image Manipulations</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/modmap.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://alex-costanzino.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://cvlab-unibo.github.io/Depth4ToM/">
+            Depth4ToM
+          </a>
+          <a class="navbar-item" href="https://cvlab-unibo.github.io/CrossmodalFeatureMapping/">
+            Crossmodal Feature Mappings
+          </a>
+          <a class="navbar-item" href="https://alex-costanzino.github.io/learning_to_be_a_transformer/">
+            Learning to Be a Transformer
+          </a>
+          <a class="navbar-item" href="https://alex-costanzino.github.io/SiM3D/">
+            SiM3D
+          </a>
+          <a class="navbar-item" href="https://alex-costanzino.github.io/radar/">
+            RADAR
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Modulate-and-Map: Crossmodal Feature Mapping with Cross-View Modulation for 3D Anomaly Detection</h1>
+          <div class="is-size-5 publication-authors">
+            
+            <span class="author-block">
+              <a href="https://alex-costanzino.github.io/">Alex Costanzino</a><sup>1</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://pierlui92.github.io/">Pierluigi Zama Ramirez</a><sup>2</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://www.unibo.it/sitoweb/giuseppe.lisanti">Giuseppe Lisanti</a><sup>1</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://www.unibo.it/sitoweb/luigi.distefano">Luigi Di Stefano</a><sup>1</sup>,
+            </span>
+
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Bologna,</span>
+            <span class="author-block"><sup>2</sup>Ca' Foscari University of Venice</span>
+          </div>
+
+          <div class="has-text-centered" style="margin: 0.75rem 0;">
+            <span class="is-size-5 has-text-weight-bold" style="font-style: italic;">
+              Accepted at CVPR Findings 2026
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/alex-costanzino/modmap-code"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/arcanoXIII/SiM3D"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+                        alt="Hugging Face" style="height:1em;">
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/pipeline.png" alt="Teaser image" height="100%" />
+      <h2 class="subtitle has-text-centered">
+        We extend Crossmodal Feature Mapping with Feature-wise Linear Modulations to enable cross-view training.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present ModMap, a natively multiview and multimodal framework for 3D anomaly detection and segmentation. 
+            Unlike existing methods that process views independently, our method draws inspiration from the crossmodal feature mapping paradigm to learn to map features across both modalities and views, while explicitly modelling view-dependent relationships through feature-wise modulation.
+          </p>
+          <p>
+            We introduce a cross-view training strategy that leverages all possible view combinations, enabling effective anomaly scoring through multiview ensembling and aggregation.
+            To process high-resolution 3D data, we train and publicly release a foundational depth encoder tailored to industrial datasets
+          </p>
+          <p>
+            Experiments on SiM3D, a recent benchmark that introduces the first multiview and multimodal setup for 3D anomaly detection and segmentation, demonstrate that ModMap attains state-of-the-art performance by surpassing previous methods by wide margins.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{costanzino2026modmap,
+  author    = {Costanzino, Alex and Zama Ramirez, Pierluigi and Lisanti, Giuseppe and Di Stefano, Luigi},
+  title     = {Modulate-and-Map: Crossmodal Feature Mapping with Cross-View Modulation for 3D Anomaly Detection},
+  journal   = {The IEEE/CVF Conference on Computer Vision and Pattern Recognition Findings},
+  year      = {2026},
+}
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <strong>Acknowledgments</strong><br><br>
+
+          <p>
+            [*] Code: This website is based on the Nerfies template, code developed for a research collaboration between researchers at Google Research and University of Washington (the Nerfies project). 
+            The <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> code is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
